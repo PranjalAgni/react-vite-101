@@ -30,9 +30,6 @@ function App() {
           onClickCallback={onClickCallback}
           countHistory={data}
         />
-        {/* <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button> */}
 
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
