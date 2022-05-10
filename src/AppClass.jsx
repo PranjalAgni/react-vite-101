@@ -3,7 +3,7 @@ import Button from "./components/Button";
 import logo from "./logo.svg";
 import "./App.css";
 
-class App extends React.Component {
+class App extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,17 +40,13 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hello Vite + React!</p>
+          <p>Hello Vite + React! from Class</p>
 
           <Button
             buttonText={this.state.countText}
             onClickCallback={this.onClickCallback}
             countHistory={data}
           />
-          {/* <button type="button" onClick={() => setCount((count) => count + 1)}>
-              count is: {count}
-            </button> */}
-
           <p>
             Edit <code>App.jsx</code> and save to test HMR updates.
           </p>
