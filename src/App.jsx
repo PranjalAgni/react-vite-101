@@ -10,7 +10,8 @@ const generateData = () => {
 function App() {
   const [count, setCount] = useState(0);
   const [countText, setCountText] = useState(`count is ${count}`);
-  const data = generateData();
+  const [data] = useState(generateData());
+  // const data = generateData();
   const onClickCallback = useCallback(() => {
     setCount(count + 1);
   }, [count]);
