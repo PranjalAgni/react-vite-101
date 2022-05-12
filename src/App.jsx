@@ -3,8 +3,11 @@ import Button from "./components/Button";
 import logo from "./logo.svg";
 import "./App.css";
 
-const generateData = () => {
-  return [{ a: 1 }, { b: 1 }, { c: 2 }];
+const generateData = (count) => {
+  const data = Array(count)
+    .fill(null)
+    .map((_elt, index) => Object.assign({}, { a: index + 1 }));
+  return data;
 };
 
 function App() {
@@ -12,6 +15,7 @@ function App() {
   const [countText, setCountText] = useState(`count is ${count}`);
   const [data] = useState(generateData());
   // const data = generateData();
+
   const onClickCallback = useCallback(() => {
     setCount(count + 1);
   }, [count]);
